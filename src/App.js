@@ -2,7 +2,7 @@
 
 import ExpensesList from './components/ExpensesList';
 
-function App() {
+const App = () => {
   // temporary expense data for testing purposes.
   const expenses = [
     {
@@ -31,6 +31,6 @@ function App() {
       <ExpensesList expenses={expenses} />
     </div>
   );
-}
+};
 
 export default App;
