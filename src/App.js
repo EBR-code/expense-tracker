@@ -4,7 +4,7 @@ import ExpensesList from './components/ExpensesList';
 
 const App = () => {
   // temporary expense data for testing purposes.
-  const expenses = [
+  const expensesArray = [
     {
       id: 'e1',
       title: 'Toilet Paper',
@@ -28,7 +28,7 @@ const App = () => {
 
   return (
     <div>
-      <ExpensesList expenses={expenses} />
+      <ExpensesList items={expensesArray} />
     </div>
   );
 };
