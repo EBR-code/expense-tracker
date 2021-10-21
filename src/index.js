@@ -1,4 +1,4 @@
-// calls the app.js file which defines and exports the App component.
+// calls the app.js file which defines and renders the App component.
 
 import ReactDOM from 'react-dom';
 

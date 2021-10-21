@@ -1,9 +1,9 @@
 // App.js is called into index.js on the ReactDOM.render(<App />) line at the location within index.html (in the public folder that has the div with an id of root)
-
+import React from 'react';
 import ExpensesList from './components/ExpensesList';
 
 const App = () => {
-  // temporary expense data for testing purposes.
+  // temporary expenses data for testing purposes.
   const expensesArray = [
     {
       id: 'e1',
@@ -11,7 +11,12 @@ const App = () => {
       amount: 94.12,
       date: new Date(2020, 7, 14),
     },
-    { id: 'e2', title: 'New TV', amount: 799.49, date: new Date(2021, 2, 12) },
+    {
+      id: 'e2',
+      title: 'New TV',
+      amount: 799.49,
+      date: new Date(2021, 2, 12),
+    },
     {
       id: 'e3',
       title: 'Car Insurance',
@@ -25,9 +30,17 @@ const App = () => {
       date: new Date(2021, 5, 12),
     },
   ];
+  // // ---- commented code below is how jsx is transformed via syntactic sugar
+  // return React.createElement(
+  //   'div',
+  //   {},
+  //   React.createElement('h2', {}, "Let's get started!"),
+  //   React.createElement(ExpensesList, { items: expensesArray })
+  // );
 
   return (
     <div>
+      {/* pas */}
       <ExpensesList items={expensesArray} />
     </div>
   );
