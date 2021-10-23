@@ -5,13 +5,12 @@ import Card from '../UI/Card';
 import './ExpenseItem.css';
 
 const ExpenseItem = props => {
-  useState();
-
-  let title = props.title;
+  const [title, setTitle] = useState(props.title);
 
   const clickHandler = () => {
-    title = 'Updated!';
+    setTitle('Update!');
     console.log(title);
+    // console.log(setTitle);
   };
 
   return (
