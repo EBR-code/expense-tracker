@@ -1,6 +1,7 @@
 // App.js is called into index.js on the ReactDOM.render(<App />) line at the location within index.html (in the public folder that has the div with an id of root)
 import React from 'react';
 import ExpensesList from './components/Expenses/ExpensesList';
+import NewExpense from './components/NewExpenses/NewExpense';
 
 const App = () => {
   // temporary expenses data for testing purposes.
@@ -40,7 +41,7 @@ const App = () => {
 
   return (
     <div>
-      {/* pas */}
+      <NewExpense />
       <ExpensesList items={expensesArray} />
     </div>
   );
