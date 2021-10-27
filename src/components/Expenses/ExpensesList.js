@@ -2,9 +2,11 @@ import Card from '../UI/Card';
 import ExpenseItem from './ExpenseItem';
 import './ExpensesList.css';
 
+//from App.js we pass the expenseArray throught props "items"
 const ExpensesList = props => {
   return (
     <Card className="expenses-list">
+      {/* Passes props "items" from expenseArray in App.js to ExpenseItem through props  */}
       <ExpenseItem
         title={props.items[0].title}
         amount={props.items[0].amount}

@@ -5,12 +5,12 @@ import Card from '../UI/Card';
 import './ExpenseItem.css';
 
 const ExpenseItem = props => {
+  //adding a state to the title, if we want to change the title
   const [title, setTitle] = useState(props.title);
-
+  // listens to a click event to change the title
   const clickHandler = () => {
     setTitle('Update!');
     console.log(title);
-    // console.log(setTitle);
   };
 
   return (

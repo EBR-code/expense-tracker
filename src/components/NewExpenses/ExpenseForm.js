@@ -18,6 +18,17 @@ const ExpenseForm = () => {
 
   const submitHandler = event => {
     event.preventDefault();
+
+    const expenseData = {
+      title: enteredTitle,
+      amount: enteredAmount,
+      // parse enteredDate to the new Date constructor to convert to a date object.
+      date: new Date(enteredDate)
+    };
+    console.log(expenseData);
+    setEnteredTitle('');
+    setEnteredAmount('');
+    setEnteredDate('');
   };
 
   return (
@@ -27,7 +38,7 @@ const ExpenseForm = () => {
           <label>Title</label>
           <input
             type="text"
-            placeholder="New Expense Title"
+            value={enteredTitle}
             onChange={titleChangeHandler}
           />
         </div>
@@ -37,7 +48,7 @@ const ExpenseForm = () => {
             type="number"
             min="0.01"
             step="0.01"
-            placeholder="New Expense Amount"
+            value={enteredAmount}
             onChange={amountChangeHandler}
           />
         </div>
@@ -47,6 +58,7 @@ const ExpenseForm = () => {
             type="date"
             min="2021-01-01"
             max="2022-12-31"
+            value={enteredDate}
             onChange={dateChangeHandler}
           />
         </div>
