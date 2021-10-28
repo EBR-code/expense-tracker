@@ -1,6 +1,7 @@
 import './ExpenseDate.css';
 
 const ExpenseDate = props => {
+  // returns a string with a language sensitive representation of this date.
   const month = props.date.toLocaleString('en-US', { month: 'long' });
   const year = props.date.toLocaleString('en-US', { year: 'numeric' });
   const day = props.date.toLocaleString('en-US', { day: 'numeric' });

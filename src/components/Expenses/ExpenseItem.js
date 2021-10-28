@@ -4,8 +4,9 @@ import ExpenseDate from './ExpenseDate';
 import Card from '../UI/Card';
 import './ExpenseItem.css';
 
+//pass expenseArray data from App.js < ExpensesList.js
 const ExpenseItem = props => {
-  //adding a state to the title, if we want to change the title
+  //adding a state to the title, a data which might change
   const [title, setTitle] = useState(props.title);
   // listens to a click event to change the title
   const clickHandler = () => {
@@ -15,6 +16,7 @@ const ExpenseItem = props => {
 
   return (
     <Card className="expense-item">
+      {/* Pass date data from expenseArray to ExpenseDate.js */}
       <ExpenseDate date={props.date} />
       <div className="expense-item__description">
         <h2>{title}</h2>

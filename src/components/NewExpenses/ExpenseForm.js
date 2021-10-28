@@ -2,23 +2,28 @@ import React, { useState } from 'react';
 import './ExpenseForm.css';
 
 const ExpenseForm = () => {
+  //3 states for the ExpenseForm inputs.
   const [enteredTitle, setEnteredTitle] = useState('');
   const [enteredAmount, setEnteredAmount] = useState('');
   const [enteredDate, setEnteredDate] = useState('');
 
   const titleChangeHandler = event => {
+    // passes data from title input to the 2nd element in the title state.
     setEnteredTitle(event.target.value);
   };
   const amountChangeHandler = event => {
+    // passes data from amount input to the 2nd element in the amount state.
     setEnteredAmount(event.target.value);
   };
   const dateChangeHandler = event => {
+    // passes data from date input to the 2nd element in the date state.
     setEnteredDate(event.target.value);
   };
 
   const submitHandler = event => {
+    //prevent page to reload on form submit
     event.preventDefault();
-
+    // passes data from submitted form input into the expenseData object
     const expenseData = {
       title: enteredTitle,
       amount: enteredAmount,
