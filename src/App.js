@@ -31,6 +31,7 @@ const App = () => {
       date: new Date(2021, 5, 12)
     }
   ];
+  //function we passed through a prop to get expenseData from child component NewExpense which it also got from its child component ExpenseForm.
   const addExpenseHandler = expense => {
     console.log('In App.js');
     console.log(expense);

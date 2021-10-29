@@ -11,6 +11,7 @@ const NewExpense = props => {
       // FIXME later
       id: Math.random().toString()
     };
+    // passes expenseData from ExpenseForm to App.js
     props.onAddExpense(expenseData);
     console.log(expenseData);
   };
