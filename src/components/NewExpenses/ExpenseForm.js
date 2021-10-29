@@ -29,6 +29,7 @@ const ExpenseForm = props => {
       // parse enteredDate to the new Date constructor to convert to a date object.
       date: new Date(enteredDate)
     };
+    //passes data from here to parent component NewExpenses
     props.onSaveExpenseData(expenseData);
     setEnteredTitle('');
     setEnteredAmount('');

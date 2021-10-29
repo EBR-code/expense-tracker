@@ -31,10 +31,14 @@ const App = () => {
       date: new Date(2021, 5, 12)
     }
   ];
-
+  const addExpenseHandler = expense => {
+    console.log('In App.js');
+    console.log(expense);
+  };
   return (
     <div>
-      <NewExpense />
+      {/*  */}
+      <NewExpense onAddExpense={addExpenseHandler} />
       {/* Passes expenseArray data as a props "items" to ExpensesList.js */}
       <ExpensesList items={expensesArray} />
     </div>
