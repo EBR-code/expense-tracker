@@ -7,11 +7,8 @@ import './ExpensesList.css';
 const ExpensesList = props => {
   return (
     <div>
-      <ExpensesFilter />
-      {/* //below "className" is a "props" name of the "Card" component
-    // Not and "HTML (CSS) attribute name."
-    //because the <Card ....../> is a JSX tag, NOT and "HTML" element */}
       <Card className="expenses-list">
+        <ExpensesFilter />
         {/* Pass props "items" from expenseArray in App.js to ExpenseItem through props  */}
         <ExpenseItem
           title={props.items[0].title}
