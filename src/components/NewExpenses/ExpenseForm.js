@@ -22,7 +22,7 @@ const ExpenseForm = props => {
   const submitHandler = event => {
     //prevent page to reload on form-submit
     event.preventDefault();
-    // passes data from submitted form input into the expenseData object
+    // packs  data from submitted form input into the expenseData object
     const expenseData = {
       title: enteredTitle,
       amount: enteredAmount,
