@@ -2,14 +2,17 @@ import React from 'react';
 import './ExpensesFilter.css';
 
 const ExpensesFilter = props => {
+  // TODO create a function that listens to change in year filter, then get that data, then pass it to ExpenseList
   const yearChangeHandler = event => {
+    props.onYearChange(event.target.value);
     console.log(event.target.value);
   };
   return (
     <div className="expenses-filter">
       <div className="expenses-filter__control">
         <label>Filter by year</label>
-        <select onChange={yearChangeHandler}>
+        {/*  */}
+        <select value={props.defaultYear} onChange={yearChangeHandler}>
           <option value="2022">2022</option>
           <option value="2021">2021</option>
           <option value="2020">2020</option>

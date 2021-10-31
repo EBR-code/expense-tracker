@@ -1,3 +1,4 @@
+import React, { useState } from 'react';
 import Card from '../UI/Card';
 import ExpenseItem from './ExpenseItem';
 import ExpensesFilter from './ExpensesFilter';
@@ -5,10 +6,18 @@ import './ExpensesList.css';
 
 //from App.js we pass the expenseArray throught props "items"
 const ExpensesList = props => {
+  const [yearChange, setYearChange] = useState('2021');
+  const saveYearChangeHandler = chosenYear => {
+    setYearChange(chosenYear);
+    console.log(chosenYear);
+  };
   return (
     <div>
       <Card className="expenses-list">
-        <ExpensesFilter />
+        <ExpensesFilter
+          defaultYear={yearChange}
+          onYearChange={saveYearChangeHandler}
+        />
         {/* Pass props "items" from expenseArray in App.js to ExpenseItem through props  */}
         <ExpenseItem
           title={props.items[0].title}
