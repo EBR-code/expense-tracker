@@ -41,9 +41,9 @@ const App = () => {
   };
   return (
     <div>
-      {/*  */}
+      {/* Gets new expense data from NewExpense, which it also got from ExpenseForm */}
       <NewExpense onAddExpense={addExpenseHandler} />
-      {/* Passes expenseArray data as a props "items" to ExpensesList.js */}
+      {/* Passes expenseArray data as a props "items" to ExpensesList.js to render as lists. */}
       <ExpensesList items={expenses} />
     </div>
   );

@@ -4,7 +4,7 @@ import ExpenseForm from './ExpenseForm';
 import './NewExpense.css';
 
 const NewExpense = props => {
-  //function we passed through a prop to get expenseData from child component ExpenseForm.
+  //function we passed through a prop to get expenseData from child component-ExpenseForm.
   const saveExpenseDataHandler = enteredExpenseData => {
     const expenseData = {
       ...enteredExpenseData,
@@ -17,7 +17,7 @@ const NewExpense = props => {
   };
   return (
     <div className="new-expense">
-      {/* onSaveExpenseData prop naming convention, the prop value should be a function, a function that is triggered when something happens inside of this component */}
+      {/* gets the submitted expense data from ExpenseForm. */}
       <ExpenseForm onSaveExpenseData={saveExpenseDataHandler} />
     </div>
   );

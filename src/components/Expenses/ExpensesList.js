@@ -7,7 +7,7 @@ import './ExpensesList.css';
 //from App.js we pass the expenseArray throught props "items"
 const ExpensesList = props => {
   const [yearChange, setYearChange] = useState('2021');
-  // a function that handles the data from the onYearChange props, by setting that data to setYearChange state
+  // a function that handles the data from the onYearChange props, by setting that data to setYearChange
   const saveYearChangeHandler = chosenYear => {
     setYearChange(chosenYear);
     console.log(chosenYear);
@@ -19,7 +19,7 @@ const ExpensesList = props => {
           defaultYear={yearChange}
           onYearChange={saveYearChangeHandler}
         />
-        {/* Iterate Exp */}
+        {/* iterate through expense-data-array, pass elements to ExpenseItem attribute */}
         {props.items.map(expense => (
           <ExpenseItem
             title={expense.title}
