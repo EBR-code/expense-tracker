@@ -18,7 +18,7 @@ const ExpenseForm = props => {
   const dateChangeHandler = event => {
     setEnteredDate(event.target.value);
   };
-
+  // function handler that gets and passed the data from the form to
   const submitHandler = event => {
     //prevent page to reload on form-submit
     event.preventDefault();
@@ -31,6 +31,7 @@ const ExpenseForm = props => {
     };
     //passes data from here to parent component NewExpenses
     props.onSaveExpenseData(expenseData);
+    //after passing expense data to NewExpense, we now reset state
     setEnteredTitle('');
     setEnteredAmount('');
     setEnteredDate('');
