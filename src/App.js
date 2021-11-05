@@ -33,7 +33,7 @@ const DUMMY_EXPENSES = [
 
 const App = () => {
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
-  // function handler
+  // function that receives the expense data from NewExpense which it also got from ExpenseForm, then assigns it to a state updating function, to update our stateful list.
   const addExpenseHandler = expense => {
     setExpenses(prevExpense => {
       return [expense, ...prevExpense];
@@ -41,7 +41,7 @@ const App = () => {
   };
   return (
     <div>
-      {/* Gets new expense data from NewExpense, which it also got from ExpenseForm */}
+      {/* Receives new expense data from NewExpense, which it also got from ExpenseForm */}
       <NewExpense onAddExpense={addExpenseHandler} />
       {/* Passes expenseArray data as a props "items" to ExpensesList.js to render as lists. */}
       <ExpensesList items={expenses} />

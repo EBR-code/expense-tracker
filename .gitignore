@@ -1,5 +1,6 @@
 .idea/
 .vscode/
+.eslintcache
 node_modules/
 build
 .DS_Store
@@ -12,4 +13,4 @@ yarn-debug.log*
 yarn-error.log*
 /.changelog
 .npm/
-.eslintcache
+
