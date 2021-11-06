@@ -1,6 +1,6 @@
 // App.js is called into index.js on the ReactDOM.render(<App />) line at the location within index.html (in the public folder that has the div with an id of root)
 import React, { useState } from 'react';
-import ExpensesList from './components/Expenses/ExpensesList';
+import Expenses from './components/Expenses/Expenses';
 import NewExpense from './components/NewExpenses/NewExpense';
 
 // temporary expenses data for testing purposes.
@@ -34,8 +34,8 @@ const DUMMY_EXPENSES = [
 const App = () => {
   const [expenses, setExpenses] = useState(DUMMY_EXPENSES);
   // function that receives the expense data from NewExpense which it also got from ExpenseForm, then assigns it to a state updating function, to update our stateful list.
-  const addExpenseHandler = expense => {
-    setExpenses(prevExpense => {
+  const addExpenseHandler = (expense) => {
+    setExpenses((prevExpense) => {
       return [expense, ...prevExpense];
     });
   };
@@ -44,7 +44,7 @@ const App = () => {
       {/* Receives new expense data from NewExpense, which it also got from ExpenseForm */}
       <NewExpense onAddExpense={addExpenseHandler} />
       {/* Passes expenseArray data as a props "items" to ExpensesList.js to render as lists. */}
-      <ExpensesList items={expenses} />
+      <Expenses items={expenses} />
     </div>
   );
 };

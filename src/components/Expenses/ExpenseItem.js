@@ -5,7 +5,7 @@ import Card from '../UI/Card';
 import './ExpenseItem.css';
 
 //pass expenseArray data from App.js < ExpensesList.js
-const ExpenseItem = props => {
+const ExpenseItem = (props) => {
   return (
     <Card className="expense-item">
       {/* Pass date data from expenseArray to ExpenseDate.js */}
