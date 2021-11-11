@@ -4,18 +4,16 @@ import ExpenseForm from './ExpenseForm';
 import './NewExpense.css';
 
 const NewExpense = (props) => {
-  // TODO add "Add New Expense" Button which intially shows instead of the ExpenseForm
   const [isEditing, setIsEditing] = useState(false);
-
+  // listens when Add New Expense Button is clicked.
   const addNewExpenseHandler = () => {
-    // listen when the button gets clicked,
     setIsEditing(true);
-    // if it gets clicked show ExpenseForm,
   };
+  // listens when Cancel button in ExpenseForm is clicked
   const cancelAddNewExpenseHandler = () => {
     setIsEditing(false);
   };
-  //function we passed through a prop to get expenseData from child component-ExpenseForm.
+  //listens if data is submitted from ExpenseForm then adds an ID then, pass.
   const saveExpenseDataHandler = (enteredExpenseData) => {
     const expenseData = {
       ...enteredExpenseData,
@@ -29,10 +27,11 @@ const NewExpense = (props) => {
 
   return (
     <div className="new-expense">
+      {/* if isEditing false just show the button, else show the Expense Form */}
       {!isEditing && (
         <button onClick={addNewExpenseHandler}>Add New Expense</button>
       )}
-      {/* gets the submitted expense data from ExpenseForm. */}
+      {/* gets the submitted expense data from ExpenseForm, passes it into the saveExpenseHandler*/}
       {isEditing && (
         <ExpenseForm
           onSaveExpenseData={saveExpenseDataHandler}
