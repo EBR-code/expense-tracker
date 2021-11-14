@@ -7,7 +7,7 @@ import ExpensesList from './ExpensesList';
 //from App.js we pass the expenseArray throught props "items"
 const Expenses = (props) => {
   const [yearChange, setYearChange] = useState('2021');
-  // a function that handles the data from the onYearChange props, by setting that data to setYearChange
+  // a function that handles the data from an event change in ExpenseFilter, by setting that data to setYearChange
   const saveYearChangeHandler = (chosenYear) => {
     setYearChange(chosenYear);
   };
